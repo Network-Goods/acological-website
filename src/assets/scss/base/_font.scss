@@ -10,20 +10,30 @@
 
 /* Register our custom font family and tell the browser where to find it. */
 @font-face {
-  font-family: 'meyrin';
-  src: url('../fonts/Meyrin.woff') format('woff');
+  font-family: 'OverpassMono';
+  src: url('../fonts/OverpassMono-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 /* Register our custom font family and tell the browser where to find it. */
 @font-face {
-  font-family: 'FragmentMono';
-  src: url('../fonts/FragmentMono-Regular.woff2') format('woff2');
-  font-weight: normal;
+  font-family: 'Archivo';
+  src: url('../fonts/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('../fonts/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 body {
   color: var(--font-color);
@@ -38,9 +48,9 @@ body {
   a {
     color: var(--link-color);
 
-    &:visited {
-      color: var(--link-clicked-color);
-    }
+    // &:visited {
+    //   color: var(--link-clicked-color);
+    // }
 
     &:hover,
     &:focus {
@@ -54,29 +64,55 @@ body {
     word-break: break-word;
   }
 
-  :where(h1, h2) {
+  :where(h1, h2, h3) {
     font-family: var(--font-family-special);
   }
 
-  h1,
-  h2 {
-    // font-weight: 800;
-    font-weight: 100;
+  h1 {
+    font-weight: 900;
     line-height: 2em;
   }
+  
+  h2 {
+    font-weight: 700;
+    line-height: 2em;
+  
+    &.blue-heading {
+    color: #67C5EC;
+    }
+    &.purple-heading {
+    color: #C08BC1;
+    }
+  }
 
-  h3,
+
+
+     h3 {
+       font-weight: 900;
+       line-height: 2em;
+      &.pink-heading {
+          color: #EC898B;
+        }
+      &.purple-heading {
+          color: #963D97;
+        }
+     }
   h4,
   h5,
   h6 {
     font-weight: 600;
   }
 
+  p, li {
+      letter-spacing: -0.07em;
+      line-height: 1.75em;
+  }
+
   h1 {
     @include size-36;
 
     @include breakpoint(medium) {
-      @include size-48;
+      @include size-60;
     }
   }
 
@@ -84,15 +120,15 @@ body {
     @include size-30;
 
     @include breakpoint(medium) {
-      @include size-36;
+      @include size-48;
     }
   }
 
   h3 {
-    @include size-24;
+    @include size-20;
 
     @include breakpoint(medium) {
-      @include size-30;
+      @include size-24;
     }
   }
 
@@ -125,6 +161,4 @@ body {
   overflow-wrap: break-word;
 }
 
-.meyrin {
-  font-family: 'meyrin';
-}
+
