@@ -1,6 +1,6 @@
 ---
-import Navigation from '../components/Navigation.astro'
-import { SkipLinks } from 'accessible-astro-components'
+import Navigation from "../components/Navigation.astro";
+import { SkipLinks } from "accessible-astro-components";
 ---
 
 <header>
@@ -38,7 +38,7 @@ import { SkipLinks } from 'accessible-astro-components'
 </header>
 
 <style lang="scss">
-  @use '../assets/scss/base/breakpoint' as *;
+  @use "../assets/scss/base/breakpoint" as *;
 
   .container {
     display: flex;
@@ -54,12 +54,6 @@ import { SkipLinks } from 'accessible-astro-components'
 
     img {
       max-height: 40px;
-    }
-
-    .menu-item {
-      > a {
-        font-family: 'meyrin';
-      }
     }
   }
 </style>
