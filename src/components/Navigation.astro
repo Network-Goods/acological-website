@@ -8,7 +8,7 @@ import { DarkMode } from "accessible-astro-components";
     <a href="/">
       <img
         class="logo-header"
-        src={(await import("../assets/img/logo-hor.png")).default}
+        src={(await import("../assets/img/arcological-banner.png")).default}
         alt="Arcological Logo"
       />
     </a>
@@ -403,8 +403,12 @@ import { DarkMode } from "accessible-astro-components";
   }
 
   .logo-header {
-    max-width: 35ch;
+    max-width: 380px;
+    width: 100%;
     position: relative;
     left: -10%;
+    @media screen and (max-width: 860px) {
+      max-width: 265px;
+    }
   }
 </style>

@@ -10,13 +10,15 @@ import Button from "../components/Button.astro";
     <div class="padding-64">
       <div class="container margin-128 bottom" data-auto-grid="1">
         <div class="grid">
-          <div class="small-10 medium-7 medium-offset-4">
+          <div class="small-12 medium-7 medium-offset-4">
             <h1 class="margin-16 bottom title-left">
               Building the<br /> public good.
             </h1>
           </div>
-          <div class="small-10 medium-7 space-9" data-animation="fade-in">
-            <p>{text.filter((x) => x.page === "thesis")[0].body[0].content}</p>
+          <div class="small-12 medium-7 space-9" data-animation="fade-in">
+            <p class="bg-neutral-100 radius-large">
+              {text.filter((x) => x.page === "thesis")[0].body[0].content}
+            </p>
           </div>
         </div>
       </div>
@@ -29,7 +31,7 @@ import Button from "../components/Button.astro";
     <div class="padding-48">
       <div class="container margin-96 top">
         <div class="grid">
-          <div class="small-10 medium-12 space-content margin-48 bottom">
+          <div class="small-12 medium-12 space-content margin-48 bottom">
             <h2 class="margin-16 blue-heading">
               {text.filter((x) => x.page === "ipfs-fund")[0].title}
             </h2>
@@ -51,7 +53,7 @@ import Button from "../components/Button.astro";
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
-          <img src="placeholder.png" alt="Acrological Logo" class="logo" />
+          <img src="ipfs-circle.png" alt="IPFS Fund Logo" class="logo" />
         </div>
       </div>
     </div>
@@ -65,7 +67,7 @@ import Button from "../components/Button.astro";
   >
     <div class="container">
       <div class="grid">
-        <div class="small-10 medium-6 space-content">
+        <div class="small-12 medium-6 space-content">
           <h2 class="purple-heading">
             {text.filter((x) => x.page === "private-retrieval")[0].title}
           </h2>
@@ -83,23 +85,27 @@ import Button from "../components/Button.astro";
         </div>
 
         <div
-          class="small-11 medium-7 offset-medium-7 space-content text-neutral-800 bg-neutral-100 space-32 padding-64 radius-large"
+          class="small-12 medium-7 offset-medium-7 text-neutral-800 bg-neutral-100 radius-large padding-32"
         >
-          <h3 class="purple-heading">
-            {text.filter((x) => x.page === "private-retrieval")[0].list.blurb}
-          </h3>
-          <ul>
-            {
-              text
-                .filter((x) => x.page === "private-retrieval")[0]
-                .list.content.map((item) => <li> {item.content} </li>)
-            }
-          </ul>
-          <Button
-            title="Find Opportunities"
-            link="https://ipfs.fund"
-            className="purple"
-          />
+          <div class="space-content space-48">
+            <h3 class="purple-heading">
+              {text.filter((x) => x.page === "private-retrieval")[0].list.blurb}
+            </h3>
+            <ul>
+              {
+                text
+                  .filter((x) => x.page === "private-retrieval")[0]
+                  .list.content.map((item) => (
+                    <li class="padding-12"> {item.content} </li>
+                  ))
+              }
+            </ul>
+            <Button
+              title="Find Opportunities"
+              link="https://ipfs.fund"
+              className="purple"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -110,7 +116,7 @@ import Button from "../components/Button.astro";
   <!-- WHY -->
   <section class="padding-64 margin-64 top" id="why">
     <div class="container">
-      <div class="small-10 medium-12 space-content">
+      <div class="small-12 medium-12 space-content">
         <h2 class="margin-16">
           {text.filter((x) => x.page === "why")[0].title}
         </h2>
@@ -143,20 +149,23 @@ import Button from "../components/Button.astro";
   <section class="padding-48 hex4" id="about">
     <div class="container">
       <div class="grid">
-        <div class="small-10 medium-7 space-content">
+        <div class="small-12 medium-7 space-content">
           <h2>{text.filter((x) => x.page === "about")[0].title}</h2>
-          <p class="small-10 medium-7 bg-neutral-100 space-32 radius-large">
+          <p class="small-12 medium-7 bg-neutral-100 radius-large">
             {text.filter((x) => x.page === "about")[0].body[0].content}
+          </p>
+          <p class="small-12 medium-7 bg-neutral-100 radius-large">
+            {text.filter((x) => x.page === "about")[0].body[1].content}
           </p>
         </div>
 
         <div
-          class="small-11 medium-5 space-content space-32 text-neutral-100 bg-neutral-800 radius-large"
+          class="small-12 medium-5 space-content space-32 text-neutral-100 bg-neutral-800 radius-large"
         >
           <h3 class="pink-heading">
-            {text.filter((x) => x.page === "about")[0].body[1].subtitle}
+            {text.filter((x) => x.page === "about")[0].body[2].subtitle}
           </h3>
-          <p>{text.filter((x) => x.page === "about")[0].body[1].content}</p>
+          <p>{text.filter((x) => x.page === "about")[0].body[2].content}</p>
         </div>
       </div>
     </div>
