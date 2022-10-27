@@ -1,7 +1,6 @@
 ---
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 import text from "../assets/text/copy.json";
-import { Accordion, AccordionItem } from "accessible-astro-components";
 import Button from "../components/Button.astro";
 import Video from "../components/Video.jsx";
 ---
@@ -39,11 +38,7 @@ import Video from "../components/Video.jsx";
             <p>
               {text.filter((x) => x.page === "ipfs-fund")[0].body[0].content}
             </p>
-            <Button
-              title="Learn More"
-              link="/"
-              className="blue"
-            />
+            <Button title="Learn More" link="/" className="blue" />
           </div>
         </div>
 
@@ -73,11 +68,7 @@ import Video from "../components/Video.jsx";
                 .content
             }
           </p>
-          <Button
-            title="Learn More"
-            link="/"
-            className="purple"
-          />
+          <Button title="Learn More" link="/" className="purple" />
         </div>
 
         <div
@@ -96,11 +87,7 @@ import Video from "../components/Video.jsx";
                   ))
               }
             </ul>
-            <Button
-              title="Find Opportunities"
-              link="/"
-              className="purple"
-            />
+            <Button title="Find Opportunities" link="/" className="purple" />
           </div>
         </div>
       </div>
@@ -121,21 +108,18 @@ import Video from "../components/Video.jsx";
           {text.filter((x) => x.page === "why")[0].body[0].content}
         </p>
       </div>
-      <div class="accordians">
-        <div class="accordian-grid">
-          <!-- GRID WITH REASONS -->
-          {
-            text
-              .filter((x) => x.page === "why")[0]
-              .list.content.map((item) => (
-                <Accordion>
-                  <AccordionItem header={item.title}>
-                    <p>{item.content}</p>
-                  </AccordionItem>
-                </Accordion>
-              ))
-          }
-        </div>
+      <div class="accordion-grid">
+        <!-- GRID WITH REASONS -->
+        {
+          text
+            .filter((x) => x.page === "why")[0]
+            .list.content.map((item) => (
+              <div class="accordion">
+                <h3>{item.title}</h3>
+                <p>{item.content}</p>
+              </div>
+            ))
+        }
       </div>
     </div>
     <img src="background_wave4.svg" alt="Wave Decoration" class="wave4" />
