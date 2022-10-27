@@ -10,8 +10,8 @@
 
 /* Register our custom font family and tell the browser where to find it. */
 @font-face {
-  font-family: 'OverpassMono';
-  src: url('../fonts/OverpassMono-VariableFont_wght.ttf') format('truetype');
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -111,7 +111,6 @@ body {
   }
 
   p, li {
-      letter-spacing: -0.07em;
       line-height: 1.75em;
   }
 

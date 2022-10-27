@@ -3,6 +3,7 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 import text from "../assets/text/copy.json";
 import { Accordion, AccordionItem } from "accessible-astro-components";
 import Button from "../components/Button.astro";
+import Video from "../components/Video.jsx";
 ---
 
 <DefaultLayout title="Acrological">
@@ -40,19 +41,14 @@ import Button from "../components/Button.astro";
             </p>
             <Button
               title="Learn More"
-              link="https://ipfs.fund"
+              link="/"
               className="blue"
             />
           </div>
         </div>
 
         <div class="flex">
-          <iframe
-            src="https://www.youtube.com/embed/YfpnGPYddK8"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+          <Video client:only="react" />
           <img src="ipfs-circle.png" alt="IPFS Fund Logo" class="logo" />
         </div>
       </div>
@@ -79,7 +75,7 @@ import Button from "../components/Button.astro";
           </p>
           <Button
             title="Learn More"
-            link="https://ipfs.fund"
+            link="/"
             className="purple"
           />
         </div>
@@ -102,7 +98,7 @@ import Button from "../components/Button.astro";
             </ul>
             <Button
               title="Find Opportunities"
-              link="https://ipfs.fund"
+              link="/"
               className="purple"
             />
           </div>
@@ -154,7 +150,9 @@ import Button from "../components/Button.astro";
           <p class="small-12 medium-7 bg-neutral-100 radius-large">
             {text.filter((x) => x.page === "about")[0].body[0].content}
           </p>
-          <p class="small-12 medium-7 bg-neutral-100 radius-large">
+          <p
+            class="small-12 medium-7 bg-neutral-100 radius-large outer-padding"
+          >
             {text.filter((x) => x.page === "about")[0].body[1].content}
           </p>
         </div>

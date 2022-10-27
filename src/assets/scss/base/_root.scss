@@ -19,7 +19,7 @@
   --radius-large: 6px;
   --gap-default: 2rem;
   --font-measure: 70ch;
-  --font-family-default: 'OverpassMono',
+  --font-family-default: 'Roboto',
   system-ui,
   sans-serif;
   --font-family-special: 'Archivo',
@@ -45,6 +45,51 @@
 
 .logo {
   width: 300px
+}
+
+.outer-padding {
+  padding-left: 24px;
+  padding-bottom: 24px;
+  margin-left: -24px;
+  margin-bottom: -24px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+}
+
+iframe {
+  width: 640px;
+  height: 360px;
+  border: none;
+  outline: #019fdf solid 3px;
+  
+  &.not-safari {
+    border-radius: 10px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 36px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 480px;
+    height: 270px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 400px;
+    height: 225px;
+  }
 }
 
 .hex1 {
@@ -81,7 +126,7 @@
 .hex4 {
   background-image: url("background_hex4.svg");
   background-position-x: -10%;
-  background-position-y: 130%;
+  background-position-y: 140%;
   background-repeat: no-repeat;
   background-size: 975px;
 
@@ -144,41 +189,6 @@
   }
 }
 
-iframe {
-  width: 640px;
-  height: 360px;
-  border: none;
-  border-radius: 10px;
-  outline: #019FDF solid 3px;
-
-  @media screen and (max-width: 768px) {
-    margin-bottom: 36px;
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 480px;
-    height: 270px;
-  }
-
-  @media screen and (max-width: 500px) {
-    width: 400px;
-    height: 225px;
-  }
-}
-
-.flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-
-  @media screen and (max-width: 1200px) {
-    flex-direction: column;
-  }
-}
-
 .accordians {
   min-height: 480px;
   margin-top: 64px;
@@ -235,7 +245,6 @@ iframe {
 
   &>p {
     text-align: center;
-    letter-spacing: 0px;
     line-height: 27px;
     font-family: "Archivo", sans-serif;
   }
