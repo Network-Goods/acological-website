@@ -5,20 +5,29 @@
 @use "color" as *;
 
 :root {
-  @each $color, $shades in $colors {
-    @each $shade, $value in $shades {
+
+  @each $color,
+  $shades in $colors {
+
+    @each $shade,
+    $value in $shades {
       --#{$color}-#{$shade}: #{$value};
     }
   }
+
   --radius-small: 3px;
   --radius-large: 6px;
   --gap-default: 2rem;
   --font-measure: 70ch;
-  --font-family-default: 'OverpassMono', system-ui, sans-serif;
-  --font-family-special: 'Archivo', monospace;
-  --font-family-special2: 'Archivo', monospace;
+  --font-family-default: 'OverpassMono',
+  system-ui,
+  sans-serif;
+  --font-family-special: 'Archivo',
+  monospace;
+  --font-family-special2: 'Archivo',
+  monospace;
   --font-color: var(--neutral-800);
-  --action-color:  #E03A3E;
+  --action-color: #E03A3E;
   --link-color: black;
   --link-clicked-color: hsl(287 40% 45%);
   --background: var(--neutral-100);
@@ -34,15 +43,20 @@
   --neutral-background: var(--neutral-900);
 }
 
+.logo {
+  width: 300px
+}
+
 .hex1 {
   background-image: url("background_hex1.svg");
   background-position-x: 120%;
   background-position-y: 20%;
   background-repeat: no-repeat;
   background-size: 1200px;
+
   @media screen and (max-width: 1400px) {
-      background-size: 70%;
-    }
+    background-size: 70%;
+  }
 }
 
 .hex2 {
@@ -57,10 +71,11 @@
   position: relative;
   margin: -18em 0 -16em -3em;
   width: 580px;
+
   @media screen and (max-width: 1024px) {
-      width: 50%;
-  margin: 0 0 -10em -3em;
-    }
+    width: 50%;
+    margin: 0 0 -10em -3em;
+  }
 }
 
 .hex4 {
@@ -69,37 +84,42 @@
   background-position-y: 130%;
   background-repeat: no-repeat;
   background-size: 975px;
+
   @media screen and (max-width: 1024px) {
     background-position-y: 110%;
     background-size: 80%;
   }
+
   @media screen and (max-width: 550px) {
     background-position-y: 105%;
-}
+  }
 }
 
 .wave1 {
   position: relative;
   margin: -15em 0 -11.5em -2em;
   width: 1121px;
+
   @media screen and (max-width: 1200px) {
-      margin: -10em 0 -3em -2em;
-      width: 60%;
-    }
+    margin: -10em 0 -3em -2em;
+    width: 60%;
+  }
+
   @media screen and (max-width: 480px) {
-      margin: -10em 0 -2.7em -2em;
-      width: 70%;
-    }
+    margin: -10em 0 -2.7em -2em;
+    width: 70%;
+  }
 }
 
 .wave2 {
   position: relative;
   margin: -2.55em 0 -5em -1em;
   width: 500px;
+
   @media screen and (max-width: 768px) {
-      width: 40%;
-  margin: -2.55em 0 -2em -1em;
-    }
+    width: 40%;
+    margin: -2.55em 0 -2em -1em;
+  }
 }
 
 .wave3 {
@@ -107,9 +127,10 @@
   float: right;
   margin: -5.7em -4em 0 -5em;
   width: 35%;
+
   @media screen and (max-width: 1024px) {
-      width: 50%;
-    }
+    width: 50%;
+  }
 }
 
 .wave4 {
@@ -117,9 +138,10 @@
   margin: -2.55em 0 -5em -3em;
   width: 35%;
   z-index: -1;
+
   @media screen and (max-width: 1024px) {
-      width: 60%;
-    }
+    width: 60%;
+  }
 }
 
 iframe {
@@ -128,16 +150,20 @@ iframe {
   border: none;
   border-radius: 10px;
   outline: #019FDF solid 3px;
+
   @media screen and (max-width: 768px) {
-    margin-bottom:36px;}
+    margin-bottom: 36px;
+  }
+
   @media screen and (max-width: 768px) {
-      width: 480px;
-        height: 270px;
-    }
-        @media screen and (max-width: 500px) {
-          width: 400px;
-          height: 225px;
-        }
+    width: 480px;
+    height: 270px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 400px;
+    height: 225px;
+  }
 }
 
 .flex {
@@ -147,63 +173,70 @@ iframe {
   justify-content: space-between;
   align-items: center;
   align-content: center;
+
   @media screen and (max-width: 1200px) {
-     flex-direction: column;
-    }
+    flex-direction: column;
+  }
 }
+
 .accordians {
   min-height: 480px;
   margin-top: 64px;
 }
-.accordianGrid {
+
+.accordian-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2rem;
+
   @media screen and (max-width: 1024px) {
-      grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
 
 .accordion__wrapper {
   border-radius: 6px;
+
   .accordion__item {
     background-color: var(--neutral-800);
     color: var(--neutral-100);
+
     button {
       border-radius: 6px;
       padding: 80px 60px;
-      height:250px;
+      height: 250px;
     }
+
     border-radius: 6px;
+
     .accordion__header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 150px;
-  }
-  }
-    .accordion__item .accordion__header:focus {
-      outline-offset: 0;
-      box-shadow: none;
-    }
-    
-    .accordion__panel, .accordion__item:only-of-type .accordion__header,
-    .accordion__item:last-of-type .accordion__header {
-      border: none !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 150px;
     }
   }
-  .panel__inner 
-{  
+
+  .accordion__item .accordion__header:focus {
+    outline-offset: 0;
+    box-shadow: none;
+  }
+
+  .accordion__panel,
+  .accordion__item:only-of-type .accordion__header,
+  .accordion__item:last-of-type .accordion__header {
+    border: none !important;
+  }
+}
+
+.panel__inner {
   padding-top: 0 !important;
-  &> p {
+
+  &>p {
     text-align: center;
     letter-spacing: 0px;
     line-height: 27px;
     font-family: "Archivo", sans-serif;
   }
-  }
-
-  .logo{
-    width: 300px
-  }
+}
