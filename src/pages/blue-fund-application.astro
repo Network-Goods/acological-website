@@ -1,0 +1,50 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import Button from "../components/Button.astro";
+---
+
+<DefaultLayout title="Blue Fund Application">
+  <section class="hex5" id="home">
+    <div class="padding-64">
+      <div class="container margin-128 bottom" data-auto-grid="1">
+        <div class="grid">
+          <div class="small-12 medium-7 medium-offset-4">
+            <h1 class="margin-16 bottom title-left">
+              Blue Fund<br />Application
+            </h1>
+          </div>
+          <div class="small-12 medium-7 space-content bg-neutral-100 radius-large" data-animation="fade-in">
+            <p>
+              Our goal is to empower the creation of blue funds, which are to
+              open goods as venture capital is to start-ups. We believe that
+              more open goods will be funded if we can facilitate and templatize
+              the formation of the blue funds.
+            </p>
+            <p>
+              Analogous to startups and venture capital, any funders will be
+              able to provide the capital for a blue fund. A list of potential
+              sponsors of blue funds, their interests, and application forms is
+              below:
+            </p><hr />
+
+
+            <div class="application-list">
+              <Button
+                title="Apply"
+                link="https://github.com/Network-Goods/blue-fund-application"
+                className="blue"
+              /><div>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://github.com/Network-Goods/blue-fund-application"
+                  >Network Goods (at Protocol Labs) is interested in supporting
+                  blue funds that drive progress in web3</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</DefaultLayout>
