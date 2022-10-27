@@ -38,7 +38,6 @@ import Video from "../components/Video.jsx";
             <p>
               {text.filter((x) => x.page === "ipfs-fund")[0].body[0].content}
             </p>
-            <Button title="Learn More" link="/" className="blue" />
           </div>
         </div>
 
@@ -68,7 +67,11 @@ import Video from "../components/Video.jsx";
                 .content
             }
           </p>
-          <Button title="Learn More" link="/" className="purple" />
+          <Button
+            title="Learn More"
+            link="https://github.com/protocol/research-grants/blob/master/RFPs/rfp-014-private-retrieval-of-data.md"
+            className="purple"
+          />
         </div>
 
         <div
@@ -87,7 +90,11 @@ import Video from "../components/Video.jsx";
                   ))
               }
             </ul>
-            <Button title="Find Opportunities" link="/" className="purple" />
+            <Button
+              title="Find Opportunities"
+              link="https://grants.protocol.ai/prog/rfp-014_private_retrieval_of_data/"
+              className="purple"
+            />
           </div>
         </div>
       </div>
@@ -131,13 +138,10 @@ import Video from "../components/Video.jsx";
       <div class="grid">
         <div class="small-12 medium-7 space-content">
           <h2>{text.filter((x) => x.page === "about")[0].title}</h2>
-          <p class="small-12 medium-7 bg-neutral-100 radius-large">
-            {text.filter((x) => x.page === "about")[0].body[0].content}
-          </p>
           <p
             class="small-12 medium-7 bg-neutral-100 radius-large outer-padding"
           >
-            {text.filter((x) => x.page === "about")[0].body[1].content}
+            {text.filter((x) => x.page === "about")[0].body[0].content}
           </p>
         </div>
 
@@ -145,9 +149,9 @@ import Video from "../components/Video.jsx";
           class="small-12 medium-5 space-content space-32 text-neutral-100 bg-neutral-800 radius-large"
         >
           <h3 class="pink-heading">
-            {text.filter((x) => x.page === "about")[0].body[2].subtitle}
+            {text.filter((x) => x.page === "about")[0].body[1].subtitle}
           </h3>
-          <p>{text.filter((x) => x.page === "about")[0].body[2].content}</p>
+          <p>{text.filter((x) => x.page === "about")[0].body[1].content}</p>
         </div>
       </div>
     </div>

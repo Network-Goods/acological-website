@@ -58,7 +58,7 @@
     "body": [
       {
         "idx": 0,
-        "content": "The overall goal of AA is to help projects/teams/ideas working on public goods and common problems really take off. Some haven’t even started working yet, and others have been in development for a year(s).  At whatever stage, AA's goal is to accelerate projects/teams by providing templates and provide expertise to develop operational pipelines, modeling funding structures and developing collaboratively new models for funding untraditional ROI models."
+        "content": "The overall goal of AA is to help projects/teams/ideas working on public goods and common problems really take off. Some haven’t even started working yet, and others have been in development for a year(s).  At whatever stage, AA's goal is to accelerate projects/teams by providing operational, financial expertise and developing collaboratively new models for funding untraditional ROI models."
       }
     ],
     "list": {
@@ -66,23 +66,23 @@
       "content": [
         {
           "idx": 0,
-          "title": "Project Planning",
-          "content": "Co-creation of retroactive impact evaluator. Evaluation of milestones and deliverables including release of payments, contracting requirements and signing"
+          "title": "Funding Program design",
+          "content": "Co-design programs to achieve outcomes. Evaluation of milestones and deliverables through payment"
         },
         {
           "idx": 1,
           "title": "Technical Support",
-          "content": "Establishing an understandable and efficient mechanism to apply for funding and make and indexable/searchable database of prior funded projects"
+          "content": "Establishing efficient mechanisms to apply for funding and track prior funded projects"
         },
         {
           "idx": 2,
           "title": "Legal Consulting",
-          "content": "Once funding is offered, AA supports all  document signing & funds wired in a short SLA timeframe (in tax- and legally-compliant & efficient ways)."
+          "content": "Support all document signing & funds wired in a legally compliant, rapid timeframe"
         },
         {
           "idx": 3,
           "title": "Marketing Support",
-          "content": "Establishing a pipeline of funding that can be applied for and explorable with a publicly transparent timeline."
+          "content": "Build awareness of opportunities and a pipeline of funding applicants"
         }
       ]
     }
@@ -93,16 +93,12 @@
     "body": [
       {
         "idx": 0,
-        "content": "The Association works as a decentralized Swiss based funding vehicle for common/public good funders with the immediate step of building out efficient legal and operational infrastructure. Operational overhead support will allow for high impact/highly optimized allocation of funding to move quickly to projects who are working on public goods. Trust is key. We can turn researchers, developers, artists and founders into advocates by relationship-building, leveraging social graphs and expanding our community outside of the current feedback loops."
-      },
-      {
-        "idx": 1,
-        "content": "Arcological builds relationships with key nodes (external web3 foundations and organizations like gitcoin, eth foundation, dot and others) and within these ecosystems we generate significant network effects beyond our own scope and ability. There’s a huge opportunity for PL, IPFS & Filecoin to be *the name* when it comes to what protocol founders, researchers and creators use in web3. AA is focusing on scaling communities by scaling the public goods which they thrive on, educating and empowering them via transparency to make their best work using PLs technology."
+        "content": "Arcological Association works as a decentralized Swiss based funding vehicle for common/public good funders, providing efficient legal, financial and operational infrastructure. Operational support enables high impact/highly optimized allocation of funding to accelerate public goods projects. Trust is key. We can turn researchers, developers, artists and founders into advocates by relationship-building, leveraging social graphs and expanding our community outside of the current feedback loops."
       },
       {
         "idx": 2,
         "subtitle": "Trust is key.",
-        "content": "We can turn researchers, developers, artists and founders into advocates by relationship-building, leveraging social graphs and expanding our community outside of the current feedback loops. Arcological builds relationships with key nodes (external web3 foundations and organizations like gitcoin, eth foundation, dot and others) and within these ecosystems we generate significant network effects beyond our own scope and ability. There’s a huge opportunity for PL, IPFS & Filecoin to be *the name* when it comes to what protocol founders, researchers and creators use in web3. AA is focusing on scaling communities by scaling the public goods which they thrive on, educating and empowering them via transparency to make their best work using PLs technology."
+        "content": "Arcological builds relationships with aligned partners (e.g. web3 foundations and organizations like gitcoin, eth foundation, dot) to expand the impact of our public goods efforts. AA is focusing on scaling communities by scaling the public goods which they thrive on, educating and empowering them via transparency to make their best work using our partner's technology."
       }
     ]
   }
